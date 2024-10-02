@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    triggers {
-        gitlab(triggerOnPush: true, branchFilterType: "All")
-    }
-
     stages {
         stage('Checkout') {
             steps {
