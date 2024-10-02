@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import tn.esprit.spring.entities.User;
+
+import java.util.List;
 
 @SpringBootTest
 @TestMethodOrder(OrderAnnotation.class)
@@ -18,6 +21,6 @@ IUserService us;
 @Order(1)
 public void testRetrieveAllUsers() {
 List<User> listUsers = us.retrieveAllUsers();
-Assertions.assertEquals(0, listUsers.size());
+Assertions.assertEquals(0, ((List<?>) listUsers).size());
 }
 }
