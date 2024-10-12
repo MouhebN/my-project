@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -6,7 +5,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.5.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>tn.esprit.spring.services</groupId>
 	<artifactId>timesheet-devops</artifactId>
@@ -14,7 +13,7 @@
 	<name>timesheet-devops</name>
 	<description>tp-spring-jsf-crud</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version> <!-- Update to the desired version -->
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 	<dependencies>
@@ -42,9 +41,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.9.0.2155</version> <!-- Keep this if upgrading Java, or downgrade if needed -->
+		</dependency>
 	</dependencies>
 
-	<!-- Deploy to Nexus -->
 	<distributionManagement>
 		<repository>
 			<id>deploymentRepo</id>
@@ -67,7 +70,7 @@
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
-				<version>3.9.0.2155</version> <!-- Adjust version as needed -->
+				<version>3.9.0.2155</version> <!-- Adjust based on Java version -->
 			</plugin>
 		</plugins>
 	</build>
