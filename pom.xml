@@ -13,10 +13,8 @@
 	<name>timesheet-devops</name>
 	<description>tp-spring-jsf-crud</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-		<sonar.host.url>http://192.167.33.10:9000</sonar.host.url>
-		<sonar.token>squ_8a6a9656f2d3b3564ac7278d7411a5d89d01f10f</sonar.token>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -65,11 +63,7 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.1.0</version>
 			</plugin>
-				<plugin>
-					<groupId>org.sonarsource.scanner.maven</groupId>
-					<artifactId>sonar-maven-plugin</artifactId>
-					<version>3.9.1.2184</version>
-				</plugin>
+
 		</plugins>
 	</build>
 </project>
